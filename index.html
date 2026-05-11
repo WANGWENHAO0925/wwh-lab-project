@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANG WENHAO · Interactive Research Web v7</title>
+<link rel="stylesheet" href="style.css">
+<style>body{margin:0;background:#f3f5f7;}</style>
+</head>
+<body>
+
+<section class="wwh7-module">
+  <div class="wwh7-progress"></div>
+  <div class="wwh7-shell">
+    <header class="wwh7-hero" id="wwh7-top">
+      <section class="wwh7-card wwh7-hero-intro wwh7-reveal is-visible">
+        <span class="wwh7-kicker">WANG WENHAO · Research Archive</span>
+        <h1 class="wwh7-title">연구 방향</h1>
+        <p class="wwh7-sub">가상 캐릭터, 생성형 AI, 매체 생태학을 연결해 광고 경험과 3D 애니메이션의 변화를 탐구합니다.</p>
+        <div class="wwh7-chip-row">
+          <span class="wwh7-chip"><i></i> 메타버스 광고</span>
+          <span class="wwh7-chip"><i></i> 생성형 AI</span>
+          <span class="wwh7-chip"><i></i> 3D 애니메이션</span>
+          <span class="wwh7-chip"><i></i> 매체 생태학</span>
+        </div>
+        <div class="wwh7-hero-actions">
+          <button type="button" class="wwh7-btn" data-scroll="#paper-01">논문 보기</button>
+          <button type="button" class="wwh7-btn wwh7-btn--ghost" data-scroll="#wwh7-map">연구 지도</button>
+        </div>
+      </section>
+
+      <section class="wwh7-theme-board wwh7-reveal is-visible" aria-label="Research Themes">
+        <button type="button" class="wwh7-card wwh7-theme-card wwh7-focus-trigger is-active" data-focus="metaverse" data-scroll="#paper-01">
+          <span><span class="wwh7-card-label">Theme 01</span><strong>메타버스 광고와<br>가상 캐릭터</strong></span><span class="wwh7-theme-arrow">→</span>
+        </button>
+        <button type="button" class="wwh7-card wwh7-theme-card wwh7-focus-trigger" data-focus="workflow" data-scroll="#paper-02">
+          <span><span class="wwh7-card-label">Theme 02</span><strong>생성형 AI 기반<br>제작 공정</strong></span><span class="wwh7-theme-arrow">→</span>
+        </button>
+        <button type="button" class="wwh7-card wwh7-theme-card wwh7-focus-trigger" data-focus="ecology" data-scroll="#paper-03">
+          <span><span class="wwh7-card-label">Theme 03</span><strong>3D 애니메이션의<br>구조 재편</strong></span><span class="wwh7-theme-arrow">→</span>
+        </button>
+        <button type="button" class="wwh7-card wwh7-theme-card wwh7-focus-trigger" data-focus="perspective">
+          <span><span class="wwh7-card-label">Perspective</span><strong>브랜드 경험 ·<br>확산 이론 ·<br>매체 생태학</strong></span><span class="wwh7-theme-arrow">↗</span>
+        </button>
+      </section>
+
+      <section class="wwh7-card wwh7-route-board wwh7-reveal is-visible">
+        <div class="wwh7-route-title">
+          <span class="wwh7-card-label">Browsing Guide</span>
+          <h3>스크롤하며<br>읽는 연구 흐름</h3>
+          <p>각 논문은 핵심 질문, 분석 구조, 시각화, 시사점 순서로 이어집니다.</p>
+        </div>
+        <div class="wwh7-route-list">
+          <button type="button" class="wwh7-route-btn" data-scroll="#paper-01"><span class="wwh7-route-no">01</span><span class="wwh7-route-text"><strong>캐릭터 유형 읽기</strong><span>아바타·협업·아이돌·NFT</span></span><span class="wwh7-route-go">→</span></button>
+          <button type="button" class="wwh7-route-btn" data-scroll="#paper-02"><span class="wwh7-route-no">02</span><span class="wwh7-route-text"><strong>제작 공정 비교</strong><span>기획·제작·후반 합성</span></span><span class="wwh7-route-go">→</span></button>
+          <button type="button" class="wwh7-route-btn" data-scroll="#paper-03"><span class="wwh7-route-no">03</span><span class="wwh7-route-text"><strong>매체 구조 보기</strong><span>제작·시각·저자성·수용</span></span><span class="wwh7-route-go">→</span></button>
+        </div>
+      </section>
+
+      <section class="wwh7-card wwh7-map-board wwh7-reveal is-visible" id="wwh7-map">
+        <div class="wwh7-map-wrap">
+          <div class="wwh7-map-head"><span class="wwh7-card-label">Interactive Research Map</span><div class="wwh7-map-mini"><span></span><span></span><span></span></div></div>
+          <div class="wwh7-map-grid">
+            <button type="button" class="wwh7-map-node wwh7-map-node--top wwh7-focus-trigger is-active" data-focus="metaverse">메타버스 광고</button>
+            <button type="button" class="wwh7-map-node wwh7-map-node--left wwh7-focus-trigger" data-focus="workflow">AI 제작 공정</button>
+            <div class="wwh7-map-core"><div><strong id="wwh7-map-title">Research Focus</strong><p id="wwh7-map-copy">가상 캐릭터가 브랜드 경험을 어떻게 확장하는지 읽습니다.</p></div></div>
+            <button type="button" class="wwh7-map-node wwh7-map-node--right wwh7-focus-trigger" data-focus="ecology">매체 생태학</button>
+            <button type="button" class="wwh7-map-node wwh7-map-node--bottom wwh7-focus-trigger" data-focus="perspective">통합 관점</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <div class="wwh7-nav-wrap">
+      <nav class="wwh7-nav" aria-label="Paper Navigation">
+        <a href="#paper-01" class="is-active"><span>01</span> 메타버스 광고</a>
+        <a href="#paper-02"><span>02</span> 생성형 AI 공정</a>
+        <a href="#paper-03"><span>03</span> 매체 생태학</a>
+      </nav>
+    </div>
+
+    <main class="wwh7-main">
+      <section class="wwh7-section" id="paper-01" data-watermark="01">
+        <aside class="wwh7-sticky">
+          <div class="wwh7-card wwh7-info wwh7-reveal wwh7-delay-1">
+            <div class="wwh7-paper-no">01</div>
+            <div class="wwh7-badge-row"><span class="wwh7-badge">2024.06</span><span class="wwh7-badge">Publication</span><span class="wwh7-badge">Metaverse / Advertising</span></div>
+            <h2 class="wwh7-paper-title">메타버스 환경에서 광고에 나타난 가상 캐릭터 활용과 영향의 분석</h2>
+            <p class="wwh7-paper-summary">메타버스 광고에 등장하는 가상 캐릭터를 네 유형으로 분류하고, 전략적 체험 모듈(SEMs)을 통해 브랜드와 소비자 사이의 상호작용 확장을 분석한 연구입니다.</p>
+            <div class="wwh7-tags"><span class="wwh7-tag">메타버스</span><span class="wwh7-tag">가상 캐릭터</span><span class="wwh7-tag">광고</span><span class="wwh7-tag">SEMs</span></div>
+            <div class="wwh7-step-list">
+              <div class="wwh7-step-item is-active" data-step-target="frame"><span class="num">01</span><div><strong>연구 프레임</strong><small>광고 인터페이스로서의 캐릭터</small></div></div>
+              <div class="wwh7-step-item" data-step-target="types"><span class="num">02</span><div><strong>유형 인터랙션</strong><small>4가지 캐릭터 유형 비교</small></div></div>
+              <div class="wwh7-step-item" data-step-target="lens"><span class="num">03</span><div><strong>체험 렌즈</strong><small>감각·감성·인지·행동·관계</small></div></div>
+              <div class="wwh7-step-item" data-step-target="implication"><span class="num">04</span><div><strong>실천적 함의</strong><small>브랜드 가치와 사용자 경험</small></div></div>
+            </div>
+            <div class="wwh7-link-row"><a class="wwh7-btn" href="https://doi.org/10.18208/ksdc.2024.30.2.241" target="_blank" rel="noopener">DOI 보기</a></div>
+          </div>
+        </aside>
+        <div class="wwh7-content">
+          <article class="wwh7-block wwh7-block--plain wwh7-reveal" data-step="frame">
+            <span class="wwh7-kicker-small">Research Frame</span>
+            <h3 class="wwh7-lede">가상 캐릭터는 메타버스에서<br>브랜드 경험을 확장하는 광고 인터페이스가 된다.</h3>
+            <p class="wwh7-prose">이 연구는 가상 캐릭터를 단순한 시각 장식이 아니라, 몰입·참여·소유·팬덤을 통해 사용자와 브랜드의 관계를 조직하는 경험 장치로 읽습니다.</p>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="types">
+            <span class="wwh7-kicker-small">Character Typology · Clickable</span>
+            <div class="wwh7-type-console" style="margin-top:18px">
+              <div class="wwh7-type-panel"><div class="wwh7-type-tabs">
+                <button type="button" class="wwh7-type-tab is-active" data-type="avatar"><em>Type 01</em><strong>아바타</strong></button>
+                <button type="button" class="wwh7-type-tab" data-type="collab"><em>Type 02</em><strong>캐릭터 콜라보레이션</strong></button>
+                <button type="button" class="wwh7-type-tab" data-type="idol"><em>Type 03</em><strong>가상 아이돌</strong></button>
+                <button type="button" class="wwh7-type-tab" data-type="nft"><em>Type 04</em><strong>NFT 기반 캐릭터</strong></button>
+              </div></div>
+              <div class="wwh7-type-detail"><div class="wwh7-detail-inner"><span class="wwh7-detail-label" id="wwh7-type-label">Immersion Interface</span><h4 class="wwh7-detail-title" id="wwh7-type-title">아바타</h4><p class="wwh7-detail-body" id="wwh7-type-body">사용자가 직접 캐릭터가 되어 브랜드 공간에 들어가도록 만드는 유형입니다. 개인화된 몰입 경험과 참여 행동을 통해 광고를 ‘보는 것’에서 ‘행동하는 것’으로 전환합니다.</p><div class="wwh7-detail-keywords" id="wwh7-type-tags"><span>몰입</span><span>개인화</span><span>참여</span></div></div></div>
+            </div>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="lens">
+            <span class="wwh7-kicker-small">Reading Lens · Animated Bars</span>
+            <div class="wwh7-lens-panel">
+              <div class="wwh7-lens-layout">
+                <div class="wwh7-lens-list">
+                  <div class="wwh7-lens-row is-active" data-lens="sense"><span class="wwh7-lens-label">감각</span><span class="wwh7-lens-rail"><span class="wwh7-lens-fill" style="--level:64%;--delay:.00s"></span></span></div>
+                  <div class="wwh7-lens-row" data-lens="feel"><span class="wwh7-lens-label">감성</span><span class="wwh7-lens-rail"><span class="wwh7-lens-fill" style="--level:74%;--delay:.08s"></span></span></div>
+                  <div class="wwh7-lens-row" data-lens="think"><span class="wwh7-lens-label">인지</span><span class="wwh7-lens-rail"><span class="wwh7-lens-fill" style="--level:82%;--delay:.16s"></span></span></div>
+                  <div class="wwh7-lens-row" data-lens="act"><span class="wwh7-lens-label">행동</span><span class="wwh7-lens-rail"><span class="wwh7-lens-fill" style="--level:68%;--delay:.24s"></span></span></div>
+                  <div class="wwh7-lens-row" data-lens="relate"><span class="wwh7-lens-label">관계</span><span class="wwh7-lens-rail"><span class="wwh7-lens-fill" style="--level:88%;--delay:.32s"></span></span></div>
+                </div>
+                <div class="wwh7-lens-note"><strong>SEMs Lens</strong><h4 id="wwh7-lens-title">감각 경험</h4><p id="wwh7-lens-copy">시각적 캐릭터 이미지와 가상 공간 연출을 통해 광고가 먼저 감각적으로 인식되도록 만듭니다.</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="implication">
+            <span class="wwh7-kicker-small">Implication</span>
+            <div class="wwh7-grid-2">
+              <div class="wwh7-note"><strong>브랜드 측면</strong><p>캐릭터는 브랜드 스토리를 쉽게 이해시키고, 소비자가 브랜드 세계관에 직접 참여하도록 유도합니다.</p></div>
+              <div class="wwh7-note"><strong>운영 측면</strong><p>디자인 일관성, 사용자 경험 최적화, 데이터 보안과 윤리 이슈가 함께 설계되어야 장기적 효과가 생깁니다.</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="wwh7-section" id="paper-02" data-watermark="02">
+        <aside class="wwh7-sticky">
+          <div class="wwh7-card wwh7-info wwh7-reveal wwh7-delay-1">
+            <div class="wwh7-paper-no">02</div>
+            <div class="wwh7-badge-row"><span class="wwh7-badge">2025.06</span><span class="wwh7-badge">Publication</span><span class="wwh7-badge">Generative AI / Workflow</span></div>
+            <h2 class="wwh7-paper-title">혁신 확산 이론에 기반한 생성형 AI의 3D 애니메이션 제작 과정에서 활용 분석</h2>
+            <p class="wwh7-paper-summary">생성형 AI가 3D 애니메이션의 기획·제작·후반 합성 단계에서 어떤 확산 속성과 제약을 드러내는지 분석한 연구입니다.</p>
+            <div class="wwh7-tags"><span class="wwh7-tag">생성형 AI</span><span class="wwh7-tag">제작 공정</span><span class="wwh7-tag">혁신 확산 이론</span></div>
+            <div class="wwh7-step-list">
+              <div class="wwh7-step-item is-active" data-step-target="workflow"><span class="num">01</span><div><strong>제작 공정</strong><small>기획·제작·후반 합성</small></div></div>
+              <div class="wwh7-step-item" data-step-target="attributes"><span class="num">02</span><div><strong>확산 속성</strong><small>5가지 수용 요소</small></div></div>
+              <div class="wwh7-step-item" data-step-target="balance"><span class="num">03</span><div><strong>장점과 한계</strong><small>효율성 vs 정밀 제어</small></div></div>
+            </div>
+            <div class="wwh7-link-row"><a class="wwh7-btn" href="https://doi.org/10.18208/ksdc.2025.31.2.419" target="_blank" rel="noopener">DOI 보기</a></div>
+          </div>
+        </aside>
+        <div class="wwh7-content">
+          <article class="wwh7-block wwh7-block--plain wwh7-reveal" data-step="workflow">
+            <span class="wwh7-kicker-small">Production Workflow</span>
+            <h3 class="wwh7-lede">생성형 AI는 전체 공정을 대체하기보다,<br>각 단계의 속도와 진입 장벽을 다시 조정한다.</h3>
+            <p class="wwh7-prose">이 연구는 생성형 AI를 기획, 제작, 후반 합성에서 각각 다른 역할을 수행하는 생산 도구군으로 해석합니다.</p>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="workflow">
+            <span class="wwh7-kicker-small">Workflow Switch · Clickable</span>
+            <div class="wwh7-flow-console" style="margin-top:18px">
+              <div class="wwh7-flow-tabs">
+                <button type="button" class="wwh7-flow-tab is-active" data-flow="planning"><span>01</span><strong>기획</strong></button>
+                <button type="button" class="wwh7-flow-tab" data-flow="production"><span>02</span><strong>제작</strong></button>
+                <button type="button" class="wwh7-flow-tab" data-flow="post"><span>03</span><strong>후반 합성</strong></button>
+              </div>
+              <div class="wwh7-flow-panel wwh7-flow-detail"><div><h4 id="wwh7-flow-title">기획 단계</h4><p id="wwh7-flow-copy">아이디어 발상, 레퍼런스 탐색, 스토리보드 구성, 프롬프트 설계를 빠르게 실험할 수 있게 합니다.</p></div><div class="wwh7-flow-visual"><div class="wwh7-flow-ring"><strong id="wwh7-flow-key">Idea<br>Prompt</strong></div></div></div>
+            </div>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="attributes">
+            <span class="wwh7-kicker-small">Diffusion Attributes · Qualitative Motion</span>
+            <div class="wwh7-attr-panel" style="margin-top:18px">
+              <div class="wwh7-attr-intro"><span class="wwh7-card-label">5 Acceptance Factors</span><p>논문이 제시한 속성을 수치가 아닌 질적 강약과 제약 관계로 시각화했습니다.</p></div>
+              <div class="wwh7-attr-grid">
+                <button type="button" class="wwh7-attr-card is-active" data-attr="adv"><span class="wwh7-attr-state">핵심 강점</span><strong>상대적 이점</strong><div class="wwh7-meter"><div class="wwh7-meter-fill" style="--height:82%;--delay:.00s"></div></div><small>비용 절감, 속도 향상, 소규모 창작자 참여 확대</small></button>
+                <button type="button" class="wwh7-attr-card" data-attr="compat"><span class="wwh7-attr-state">연동 가능</span><strong>호환성</strong><div class="wwh7-meter"><div class="wwh7-meter-fill" style="--height:64%;--delay:.08s"></div></div><small>기존 툴과 연결되지만 협업 구조는 보완 과제</small></button>
+                <button type="button" class="wwh7-attr-card" data-attr="complex"><span class="wwh7-attr-state">보완 과제</span><strong>복잡성</strong><div class="wwh7-meter"><div class="wwh7-meter-fill" style="--height:44%;--delay:.16s"></div></div><small>생성 로직의 불투명성과 정밀 제어의 어려움</small></button>
+                <button type="button" class="wwh7-attr-card" data-attr="trial"><span class="wwh7-attr-state">실험 용이</span><strong>시험 가능성</strong><div class="wwh7-meter"><div class="wwh7-meter-fill" style="--height:78%;--delay:.24s"></div></div><small>무료 체험·오픈소스·모듈화로 실험이 쉬움</small></button>
+                <button type="button" class="wwh7-attr-card" data-attr="obs"><span class="wwh7-attr-state">확산 용이</span><strong>관찰 가능성</strong><div class="wwh7-meter"><div class="wwh7-meter-fill" style="--height:74%;--delay:.32s"></div></div><small>시각 결과물이 빠르게 공유되고 피드백됨</small></button>
+              </div>
+              <div class="wwh7-attr-note"><strong id="wwh7-attr-title">상대적 이점</strong><p id="wwh7-attr-copy">생성형 AI는 제작 비용과 시간을 줄이고, 비전문가나 소규모 창작자의 참여 가능성을 높이는 장점을 보입니다.</p></div>
+            </div>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="balance">
+            <span class="wwh7-kicker-small">Balance</span>
+            <div class="wwh7-grid-2"><div class="wwh7-note"><strong>강점</strong><p>상대적 이점, 시험 가능성, 관찰 가능성 측면에서 제작 환경을 빠르게 확장합니다.</p></div><div class="wwh7-note"><strong>한계</strong><p>정밀 표현, 감정 연출, 생성 로직의 가시화는 고급 콘텐츠 제작에서 여전히 보완되어야 합니다.</p></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="wwh7-section" id="paper-03" data-watermark="03">
+        <aside class="wwh7-sticky">
+          <div class="wwh7-card wwh7-info wwh7-reveal wwh7-delay-1">
+            <div class="wwh7-paper-no">03</div>
+            <div class="wwh7-badge-row"><span class="wwh7-badge">2025.12</span><span class="wwh7-badge">Publication</span><span class="wwh7-badge">Media Ecology / AI Animation</span></div>
+            <h2 class="wwh7-paper-title">매체 생태학 관점에서 생성형 AI의 3D 애니메이션에 대한 구조적 재구성 분석</h2>
+            <p class="wwh7-paper-summary">생성형 AI를 단순 도구가 아니라 3D 애니메이션의 제작·시각 언어·저자성·수용 방식을 재편하는 환경적 매체로 해석하는 연구입니다.</p>
+            <div class="wwh7-tags"><span class="wwh7-tag">매체 생태학</span><span class="wwh7-tag">생성형 AI</span><span class="wwh7-tag">저자 정체성</span><span class="wwh7-tag">수용 방식</span></div>
+            <div class="wwh7-step-list">
+              <div class="wwh7-step-item is-active" data-step-target="ecology"><span class="num">01</span><div><strong>환경적 매체</strong><small>AI를 창작 환경으로 읽기</small></div></div>
+              <div class="wwh7-step-item" data-step-target="restructure"><span class="num">02</span><div><strong>네 가지 전환</strong><small>제작·시각·저자성·수용</small></div></div>
+              <div class="wwh7-step-item" data-step-target="future"><span class="num">03</span><div><strong>미래 과제</strong><small>플랫폼·저작권·교육</small></div></div>
+            </div>
+            <div class="wwh7-link-row"><a class="wwh7-btn" href="https://doi.org/10.18208/ksdc.2025.31.4.505" target="_blank" rel="noopener">DOI 보기</a></div>
+          </div>
+        </aside>
+        <div class="wwh7-content">
+          <article class="wwh7-block wwh7-block--plain wwh7-reveal" data-step="ecology">
+            <span class="wwh7-kicker-small">Media Ecology Lens</span>
+            <h3 class="wwh7-lede">생성형 AI는 새로운 도구가 아니라,<br>창작·유통·수용을 함께 재구성하는 환경이다.</h3>
+            <p class="wwh7-prose">이 연구는 AI가 생산 효율만 높이는 보조 기술이 아니라, 애니메이션이 만들어지고 보여지고 소비되는 질서를 바꾸는 매체 환경이라고 봅니다.</p>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="restructure">
+            <span class="wwh7-kicker-small">Structural Reconstruction · Clickable Orbit</span>
+            <div class="wwh7-eco-console" style="margin-top:18px">
+              <div class="wwh7-eco-panel"><div class="wwh7-eco-orbit"><span class="wwh7-eco-line"></span><span class="wwh7-eco-line wwh7-eco-line--h"></span><div class="wwh7-eco-core"><div><strong>Generative AI</strong><span>Environmental Medium</span></div></div><button type="button" class="wwh7-eco-node n1 is-active" data-eco="process"><strong>제작 프로세스</strong><span>선형 공정에서 순환형 생성으로</span></button><button type="button" class="wwh7-eco-node n2" data-eco="visual"><strong>시각 언어</strong><span>알고리즘 미학의 형성</span></button><button type="button" class="wwh7-eco-node n3" data-eco="author"><strong>저자 정체성</strong><span>AI 오퍼레이터로의 이동</span></button><button type="button" class="wwh7-eco-node n4" data-eco="reception"><strong>수용 방식</strong><span>감각 중심의 단편적 소비</span></button></div></div>
+              <div class="wwh7-eco-panel wwh7-eco-side"><span class="wwh7-card-label">Selected Dimension</span><h4 id="wwh7-eco-title">제작 프로세스</h4><p id="wwh7-eco-copy">전통적 선형 파이프라인은 프롬프트 입력, 생성 결과 검토, 반복 수정으로 이어지는 비선형 순환 구조로 전환됩니다.</p></div>
+            </div>
+          </article>
+          <article class="wwh7-block wwh7-reveal" data-step="future">
+            <span class="wwh7-kicker-small">Future Agenda · Accordion</span>
+            <div class="wwh7-accordion" style="margin-top:18px">
+              <div class="wwh7-acc-item is-open"><button type="button" class="wwh7-acc-head"><span>플랫폼 유통</span><span>+</span></button><div class="wwh7-acc-body"><p>추천 알고리즘과 숏폼 플랫폼은 AI 애니메이션의 리듬과 시각 스타일에 직접적인 영향을 미칩니다.</p></div></div>
+              <div class="wwh7-acc-item"><button type="button" class="wwh7-acc-head"><span>저작권 · 데이터 윤리</span><span>+</span></button><div class="wwh7-acc-body"><p>학습 데이터 출처, 스타일 차용, 창작성 인정과 권리 귀속 기준에 대한 제도적 정리가 필요합니다.</p></div></div>
+              <div class="wwh7-acc-item"><button type="button" class="wwh7-acc-head"><span>AI 창작 교육</span><span>+</span></button><div class="wwh7-acc-body"><p>기술 사용법뿐 아니라 비판적 이해, 미학적 판단, 협업 윤리를 포함하는 교육 체계가 요구됩니다.</p></div></div>
+              <div class="wwh7-acc-item"><button type="button" class="wwh7-acc-head"><span>산업 협업 구조</span><span>+</span></button><div class="wwh7-acc-body"><p>기술 효율성과 예술적 다양성이 공존하기 위해 스튜디오, 플랫폼, 연구실 간 협업 구조가 중요해집니다.</p></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
